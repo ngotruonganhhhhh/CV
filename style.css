@@ -1,0 +1,277 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+      font-family: "Poppins", sans-serif;
+      background-color: lightblue;
+      max-width: 1000px;
+      margin: 50px auto;
+      box-shadow: 5px 5px rgb(90, 87, 87);
+}
+
+img {
+      max-width: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+}
+
+#header {
+      position: absolute;
+      width: 100%;
+}
+
+#header .navbar {
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px 0;
+      align-items: center;
+}
+
+#header-links {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 70%;
+      height: 100%;
+      background-color: rgb(97, 176, 97);
+      z-index: 5;
+      transform: translateX(-100%);
+      opacity: 0;
+}
+
+#header-links .navbar-link {
+      list-style: none;
+      margin: 55px;
+}
+
+#header-links .navbar-link a {
+      text-decoration: none;
+      color: rgb(90, 87, 87);
+      font-weight: 300;
+}
+
+#header-links .navbar-link a:hover {
+      font-weight: bold;
+}
+
+#header-links .navbar-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+      z-index: 6;
+      position: fixed;
+      top: 0;
+      right: 0;
+}
+
+#header-links .navbar-icons .navbar-icon:hover {
+      background-color: red;
+}
+
+#header-links .navbar-icons .navbar-icon:hover::after {
+      background-color: red;
+}
+
+#header-links .navbar-icons .navbar-icon:hover::before {
+      background-color: red;
+}
+
+#banner {
+      background-color: rgb(13, 13, 116);
+      max-width: 100%;
+}
+
+#banner .left-banner {
+      color: white;
+      padding: 30px;
+}
+
+#banner .left-banner .banner-img {
+      max-width: 100%;
+      margin: 0 auto;
+}
+
+#banner .left-banner .banner-img img {
+      margin: 15px auto;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+}
+
+#banner .left-banner .banner-img h1 {
+      text-align: center;
+      font-size: 1.2rem;
+}
+
+#banner .left-banner .banner-img h3 {
+      font-size: 1rem;
+      text-align: center;
+      font-weight: 200;
+}
+
+#banner .left-banner .banner-img hr {
+      background-color: white;
+      width: 60%;
+      margin: 20px auto;
+}
+
+#banner .left-banner .info {
+      max-width: 400px;
+      margin: 10px 0;
+}
+
+#banner .left-banner .info-icon {
+      font-size: 1.5rem;
+}
+
+#banner .left-banner .info-text {
+      font-size: 1.5rem;
+}
+
+#banner .left-banner .info ul {
+      list-style-type: none;
+      padding-top: 15px;
+}
+
+#banner .left-banner .info ul li .icon {
+      display: inline-block;
+      width: 30px;
+      color: rgb(12, 184, 242);
+}
+
+#banner .left-banner .things-item-heading {
+      margin: 25px 0;
+      max-width: 400px;
+}
+
+#banner .left-banner .things-item-heading i {
+      font-size: 1.5rem;
+}
+
+#banner .left-banner .things-item-heading span {
+      font-size: 1.5rem;
+}
+
+#banner .left-banner .things-item-heading p {
+      margin-top: 15px;
+}
+
+#banner .right-banner {
+      background-color: white;
+      padding: 25px;
+}
+
+#banner .right-banner .skill {
+      margin-top: 40px;
+}
+
+#banner .right-banner .skill i {
+      font-size: 1.5rem;
+}
+
+#banner .right-banner .skill span {
+      font-size: 1.5rem;
+}
+
+#banner .right-banner .skill-content {
+      display: flex;
+      flex-wrap: wrap;
+      color: white;
+      padding: 5px;
+}
+
+#banner .right-banner .skill-content-info {
+      background-color: rgb(13, 13, 116);
+      display: flex;
+      flex-wrap: wrap;
+      width: 45%;
+      border: 1px solid;
+      padding: 5px 0;
+      border-radius: 5px;
+      border: none;
+      align-items: center;
+      margin-right: 5px;
+      margin-bottom: 5px;
+}
+
+#banner .right-banner .skill-content-info .info-icon {
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+}
+
+#banner .right-banner .skill-content-info div {
+      width: 65%;
+      justify-content: center;
+      align-items: center;
+}
+
+#banner .right-banner .skill-content-info div .name {
+      color: red;
+}
+
+#banner .right-banner .skill-content-info div .name:hover {
+      cursor: pointer;
+      color: rgb(156, 21, 21);
+}
+
+#banner .right-banner .skill-content-info div .more {
+      font-family: sans-serif;
+      font-size: 0.8rem;
+}
+
+#banner .right-banner .things-item-heading {
+      margin: 25px 0;
+      min-width: 100px;
+}
+
+#banner .right-banner .things-item-heading i {
+      font-size: 1.5rem;
+}
+
+#banner .right-banner .things-item-heading span {
+      font-size: 1.5rem;
+}
+
+#banner .right-banner .things-item-heading .pj {
+      padding: 15px;
+}
+
+#banner .right-banner .things-item-heading hr {
+      margin: 15px auto;
+}
+
+@media screen and (min-width: 1000px) {
+      #banner {
+            display: flex;
+            flex-wrap: wrap;
+      }
+
+      #banner .left-banner {
+            width: 40%;
+      }
+
+      #banner .right-banner {
+            width: 60%;
+      }
+
+      #banner .right-banner .skill-content {
+            display: flex;
+            flex-wrap: wrap;
+      }
+
+      #banner .right-banner .skill-content-info {
+            width: 24%;
+      }
+}
+
+/*# sourceMappingURL=style.css.map */

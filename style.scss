@@ -1,0 +1,253 @@
+$green: rgb(27, 122, 27);
+$gray: rgb(90, 87, 87);
+
+* {
+
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+      font-family: "Poppins", sans-serif;
+      background-color: lightblue;
+      max-width: 1000px;
+      margin: 50px auto;
+      box-shadow: 5px 5px $gray;
+}
+
+img {
+      max-width: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+}
+
+@mixin header-size {
+      font-size: 1.5rem;
+}
+
+// .container {
+//       max-width: 1000px;
+//       width: 100%;
+//       margin: 0 auto;
+//       padding: 0 10px;
+// }
+
+#header {
+      position: absolute;
+      width: 100%;
+      .navbar {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px 0;
+            align-items: center;
+      }
+      &-links {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 70%;
+            height: 100%;
+            background-color: $greenl;
+            z-index: 5;
+            // transition: $smooth;
+            transform: translateX(-100%);
+            opacity: 0;
+            .navbar-link {
+                  list-style: none;
+                  margin: 55px;
+                  a {
+                        text-decoration: none;
+                        color: $gray;
+                        font-weight: 300;
+                        // transition: $smooth;
+                        &:hover {
+                              font-weight: bold;
+                              // transition: $smooth;
+                        }
+                  }
+            }
+            .navbar-icons {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 80px;
+                  height: 80px;
+                  cursor: pointer;
+                  // transition: $smooth;
+                  z-index: 6;
+                  position: fixed;
+                  top: 0;
+                  right: 0;
+                  .navbar-icon:hover {
+                        background-color: red;
+                  }
+                  .navbar-icon:hover::after {
+                        background-color: red;
+                  }
+                  .navbar-icon:hover::before {
+                        background-color: red;
+                  }
+            }
+      }
+}
+
+#banner {
+      background-color: rgb(13, 13, 116);
+      max-width: 100%;
+      .left-banner {
+            color: white;
+            padding: 30px;
+            .banner-img {
+                  max-width: 100%;
+                  margin: 0 auto;
+                  img {
+                        margin: 15px auto;
+                        width: 250px;
+                        height: 250px;
+                        border-radius: 50%;
+                  }
+                  h1 {
+                        text-align: center;
+                        font-size: 1.2rem;
+                  }
+                  h3 {
+                        font-size: 1rem;
+                        text-align: center;
+                        font-weight: 200;
+                  }
+                  hr {
+                        background-color: white;
+                        width: 60%;
+                        margin: 20px auto;
+                  }
+            }
+            .info {
+                  max-width: 400px;
+                  margin: 10px 0;
+                  &-icon {
+                        @include header-size;
+                  }
+                  &-text {
+                        @include header-size;
+                  }
+                  ul {
+                        list-style-type: none;
+                        padding-top: 15px;
+                        li {
+                              .icon {
+                                    display: inline-block;
+                                    width: 30px;
+                                    color: rgb(12, 184, 242);
+                              }
+                        }
+                  }
+            }
+            .things-item-heading {
+                  margin: 25px 0;
+                  max-width: 400px;
+                  i {
+                        @include header-size;
+                  }
+                  span {
+                        @include header-size;
+                  }
+                  p {
+                        margin-top: 15px;
+                  }
+            }
+      }
+      .right-banner {
+            background-color: white;
+            padding: 25px;
+            .skill {
+                  margin-top: 40px;
+                  i {
+                        @include header-size();
+                  }
+                  span {
+                        @include header-size();
+                  }
+
+                  &-content {
+                        display: flex;
+                        flex-wrap: wrap;
+                        color: white;
+                        padding: 5px;
+                        &-info {
+                              background-color: rgb(13, 13, 116);
+                              display: flex;
+                              flex-wrap: wrap;
+                              width: 45%;
+                              border: 1px solid;
+                              padding: 5px 0;
+                              border-radius: 5px;
+                              border: none;
+                              align-items: center;
+                              margin-right: 5px;
+                              margin-bottom: 5px;
+
+                              .info-icon {
+                                    @include header-size();
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 30%;
+                              }
+                              div {
+                                    width: 65%;
+                                    justify-content: center;
+                                    align-items: center;
+                                    .name {
+                                          color: red;
+                                          &:hover {
+                                                cursor: pointer;
+                                                color: rgb(156, 21, 21);
+                                          }
+                                    }
+                                    .more {
+                                          font-family: sans-serif;
+                                          font-size: 0.8rem;
+                                    }
+                              }
+                        }
+                  }
+            }
+            .things-item-heading {
+                  margin: 25px 0;
+                  min-width: 100px;
+                  i {
+                        @include header-size;
+                  }
+                  span {
+                        @include header-size;
+                  }
+                  .pj {
+                        padding: 15px;
+                  }
+                  hr {
+                        margin: 15px auto;
+                  }
+            }
+      }
+      @media screen and (min-width: 1000px) {
+            display: flex;
+            flex-wrap: wrap;
+            .left-banner {
+                  width: 40%;
+            }
+            .right-banner {
+                  width: 60%;
+                  .skill {
+                        &-content {
+                              display: flex;
+                              flex-wrap: wrap;
+                              &-info {
+                                    width: 24%;
+                              }
+                        }
+                  }
+            }
+      }
+}
