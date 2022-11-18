@@ -1,8 +1,9 @@
-$green: rgb(27, 122, 27);
-$gray: rgb(90, 87, 87);
+$blue: rgb(13, 13, 116);
+$grayIcon: rgb(12, 184, 242);
+$textColor: rgb(255, 255, 255);
+$bgColor: rgb(173, 215, 230);
 
 * {
-
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -10,98 +11,29 @@ $gray: rgb(90, 87, 87);
 
 body {
       font-family: "Poppins", sans-serif;
-      background-color: lightblue;
-      max-width: 1000px;
+      background-color: $bgColor;
+      max-width: 1100px;
       margin: 50px auto;
-      box-shadow: 5px 5px $gray;
-}
-
-img {
-      max-width: 100%;
-      width: 100%;
-      display: flex;
-      justify-content: center;
+      box-shadow: 5px 5px $blue;
 }
 
 @mixin header-size {
       font-size: 1.5rem;
 }
 
-// .container {
-//       max-width: 1000px;
-//       width: 100%;
-//       margin: 0 auto;
-//       padding: 0 10px;
-// }
-
-#header {
-      position: absolute;
-      width: 100%;
-      .navbar {
-            display: flex;
-            justify-content: flex-end;
-            padding: 20px 0;
-            align-items: center;
-      }
-      &-links {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 70%;
-            height: 100%;
-            background-color: $greenl;
-            z-index: 5;
-            // transition: $smooth;
-            transform: translateX(-100%);
-            opacity: 0;
-            .navbar-link {
-                  list-style: none;
-                  margin: 55px;
-                  a {
-                        text-decoration: none;
-                        color: $gray;
-                        font-weight: 300;
-                        // transition: $smooth;
-                        &:hover {
-                              font-weight: bold;
-                              // transition: $smooth;
-                        }
-                  }
-            }
-            .navbar-icons {
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  width: 80px;
-                  height: 80px;
-                  cursor: pointer;
-                  // transition: $smooth;
-                  z-index: 6;
-                  position: fixed;
-                  top: 0;
-                  right: 0;
-                  .navbar-icon:hover {
-                        background-color: red;
-                  }
-                  .navbar-icon:hover::after {
-                        background-color: red;
-                  }
-                  .navbar-icon:hover::before {
-                        background-color: red;
-                  }
-            }
-      }
-}
-
 #banner {
-      background-color: rgb(13, 13, 116);
+      background-color: $blue;
       max-width: 100%;
       .left-banner {
             color: white;
             padding: 30px;
             .banner-img {
                   max-width: 100%;
-                  margin: 0 auto;
+                  // margin: 0 auto;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
                   img {
                         margin: 15px auto;
                         width: 250px;
@@ -124,7 +56,6 @@ img {
                   }
             }
             .info {
-                  max-width: 400px;
                   margin: 10px 0;
                   &-icon {
                         @include header-size;
@@ -134,19 +65,27 @@ img {
                   }
                   ul {
                         list-style-type: none;
-                        padding-top: 15px;
+                        margin-top: 15px;
                         li {
                               .icon {
                                     display: inline-block;
                                     width: 30px;
                                     color: rgb(12, 184, 242);
                               }
+                              .ininfo {
+                                    a {
+                                          text-decoration: none;
+                                          color: $textColor;
+                                          &:hover {
+                                                text-decoration: underline;
+                                          }
+                                    }
+                              }
                         }
                   }
             }
-            .things-item-heading {
+            .study {
                   margin: 25px 0;
-                  max-width: 400px;
                   i {
                         @include header-size;
                   }
@@ -161,20 +100,31 @@ img {
       .right-banner {
             background-color: white;
             padding: 25px;
+            .target {
+                  span {
+                        @include header-size;
+                        i {
+                              @include header-size;
+                        }
+                  }
+                  div {
+                        padding: 15px;
+                  }
+            }
             .skill {
-                  margin-top: 40px;
+                  margin-top: 25px;
                   i {
-                        @include header-size();
+                        @include header-size;
                   }
                   span {
-                        @include header-size();
+                        @include header-size;
                   }
 
                   &-content {
                         display: flex;
                         flex-wrap: wrap;
                         color: white;
-                        padding: 5px;
+                        padding: 15px;
                         &-info {
                               background-color: rgb(13, 13, 116);
                               display: flex;
@@ -214,31 +164,40 @@ img {
                         }
                   }
             }
-            .things-item-heading {
-                  margin: 25px 0;
-                  min-width: 100px;
+            .projects {
+                  margin-top: 25px;
+                  i {
+                        @include header-size;
+                  }
+
+                  .project {
+                        padding: 15px;
+                  }
+                  hr {
+                        margin: 10px auto;
+                  }
+            }
+            .favorite {
+                  margin-top: 25px;
                   i {
                         @include header-size;
                   }
                   span {
                         @include header-size;
                   }
-                  .pj {
+                  div {
                         padding: 15px;
-                  }
-                  hr {
-                        margin: 15px auto;
                   }
             }
       }
-      @media screen and (min-width: 1000px) {
+      @media screen and (min-width: 1100px) {
             display: flex;
             flex-wrap: wrap;
             .left-banner {
-                  width: 40%;
+                  flex: 40%;
             }
             .right-banner {
-                  width: 60%;
+                  flex: 60%;
                   .skill {
                         &-content {
                               display: flex;
